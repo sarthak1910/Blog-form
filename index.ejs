@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goBlog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>goBlog</h1>
+        <p class="intro">Welcome to Bing Blog, a place where you can read and write posts on various topics.</p>
+        <a href="/new" class="button">Create a new post</a>
+        <div class="posts">
+            <% data.forEach(post=> { %>
+                <div class="card">
+                    <h2 class="title">
+                        <%= post.title %>
+                    </h2>
+                    <p class="content">
+                        <%= post.content %>
+                    </p>
+                    <p class="author">
+                        <%= post.author %>
+                    </p>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
